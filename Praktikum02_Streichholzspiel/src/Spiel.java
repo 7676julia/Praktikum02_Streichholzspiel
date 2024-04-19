@@ -24,5 +24,16 @@ public class Spiel {
     private void berechneComputerZug() {
         // Method code here
     }
+
+    //Getter und Setter
+    public int getCurrentAnzahlHoelzer() {
+        return currentAnzahlHoelzer;
+    }
+
+    public void setCurrentAnzahlHoelzer(int currentAnzahlHoelzer) {
+        this.currentAnzahlHoelzer = currentAnzahlHoelzer;
+    }
+
+    
 }
 
