@@ -1,25 +1,37 @@
 public class Spiel {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-    }
-
+    
     //Datenfelder
     private int currentAnzahlHoelzer = 0;
 
     //Konstruktor
     public Spiel(int startAnzahlHoelzer) {
         while (currentAnzahlHoelzer != 0) {
-            computerZiehen(1);
-            menschZiehen(1);
+            computerZiehen();
+            if (currentAnzahlHoelzer <= 0) {
+                Ausgabe.menschGewinnt();
+                break;  //?
+            }
+            menschZiehen();
+            if (currentAnzahlHoelzer <= 0) {
+                Ausgabe.computerGewinnt();
+                break;  //?
+            }
         }
     }
 
     //Methoden
-    public void computerZiehen (int anzahlHoelzer) {
+    public void computerZiehen () {
         // Method code here
     }
-    public void menschZiehen (int anzahlHoelzer) {
-        // Method code here
+    public void menschZiehen () {
+        int minus = Eingabe.leseHoelzer();  //Eingabe zwischen 1 und 3 des Spielers
+        if (minus > currentAnzahlHoelzer) {
+            Ausgabe.zugNichtMoeglich();
+        } else {
+            currentAnzahlHoelzer -= minus;
+            Ausgabe.menschZug(minus, currentAnzahlHoelzer);
+        }
+        
     }
     private void berechneComputerZug() {
         // Method code here

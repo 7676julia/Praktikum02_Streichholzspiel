@@ -2,13 +2,13 @@ public class Ausgabe {
     
     //Methoden
     public static void zahleEingeben() {
-        System.out.println("Bitte geben Sie eine Zahel ein: ");
+        System.out.println("Bitte geben Sie eine Zahl ein: ");
     }
     public static void keineZahl() {
         System.out.println("Das ist keine Zahl!");
     }
     public static void zahlNichtImBereich() {
-        System.out.println("Die Zahl ist nicht im Bereich!(1-3)");
+        System.out.println("Die Zahl ist nicht im Bereich!(1-3). Bitte geben Sie eine Zahl zwischen 1 und 3 ein:");
     }
     public static void menschGewinnt() {
         System.out.println("Herzlichen Glückwunsch! Sie haben gewonnen!");
