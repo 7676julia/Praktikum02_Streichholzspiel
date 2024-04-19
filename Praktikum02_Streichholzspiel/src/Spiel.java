@@ -1,10 +1,5 @@
 public class Spiel {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-
-        Eingabe.leseHoelzer();
-    }
-
+    
     //Datenfelder
     private int currentAnzahlHoelzer = 0;
 
