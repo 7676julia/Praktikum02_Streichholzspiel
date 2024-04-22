@@ -9,7 +9,7 @@ public class Eingabe {
         int zahl = 0;
         boolean isValid = false;
         while (!isValid) {
-            Ausgabe.zahleEingeben();
+            Ausgabe.zahlEingeben();
             try {
             String input = br.readLine();
             zahl = Integer.parseInt(input);

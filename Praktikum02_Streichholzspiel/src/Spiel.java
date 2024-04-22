@@ -5,6 +5,8 @@ public class Spiel {
 
     //Konstruktor
     public Spiel(int startAnzahlHoelzer) {
+        System.out.println("Willkommen zum Streichholzspiel :)");
+        currentAnzahlHoelzer = startAnzahlHoelzer;
         while (currentAnzahlHoelzer != 0) {
             computerZiehen();
             if (currentAnzahlHoelzer <= 0) {
@@ -21,7 +23,9 @@ public class Spiel {
 
     //Methoden
     public void computerZiehen () {
-        // Method code here
+        int minus= berechneComputerZug();
+        currentAnzahlHoelzer -= minus;
+        Ausgabe.computerZug(minus, currentAnzahlHoelzer);
     }
     public void menschZiehen () {
         int minus = Eingabe.leseHoelzer();  //Eingabe zwischen 1 und 3 des Spielers
@@ -33,8 +37,8 @@ public class Spiel {
         }
         
     }
-    private void berechneComputerZug() {
-        // Method code here
+    private int berechneComputerZug() {
+        return (int) (Math.random() * 3) + 1;
     }
 
     //Getter und Setter

@@ -1,7 +1,7 @@
 public class Ausgabe {
     
     //Methoden
-    public static void zahleEingeben() {
+    public static void zahlEingeben() {
         System.out.println("Bitte geben Sie eine Zahl ein: ");
     }
     public static void keineZahl() {
