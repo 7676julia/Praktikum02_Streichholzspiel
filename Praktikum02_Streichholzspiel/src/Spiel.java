@@ -31,7 +31,7 @@ public class Spiel {
         int minus = Eingabe.leseHoelzer();  //Eingabe zwischen 1 und 3 des Spielers
         while (minus > currentAnzahlHoelzer) {
             Ausgabe.zugNichtMoeglich();
-            Eingabe.leseHoelzer();
+            minus = Eingabe.leseHoelzer();
         }
             currentAnzahlHoelzer -= minus;
             Ausgabe.menschZug(minus, currentAnzahlHoelzer);
@@ -42,7 +42,8 @@ public class Spiel {
         minus = (currentAnzahlHoelzer - 1) % 4;     //modulo stellt sicher, das Ergenbis zwischen 1 und 3 liegt
         //man darf nicht 0 ziehen
         if (minus == 0) {
-            minus = 1;
+            //wenn durch 4 teilbar, dann zuffällig 1, 2 oder 3 ziehen
+            minus = (int) (Math.random() * 3) + 1;
         }
         return minus;
     }
