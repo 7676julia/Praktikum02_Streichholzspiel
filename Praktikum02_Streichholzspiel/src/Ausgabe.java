@@ -17,7 +17,7 @@ public class Ausgabe {
         System.out.println("Leider hat der Computer gewonnen!");
     }
     public static void zugNichtMoeglich() {
-        System.out.println("Der Zug ist nicht möglich, da nicht genug Streichhoelzer auf dem Tisch sind!");
+        System.out.println("Der Zug ist nicht moeglich, da nicht genug Streichhoelzer auf dem Tisch sind!");
     }
     public static void spielstand (int currentAnzahlHoelzer) {
         System.out.println("Auf dem Tisch liegen noch " + currentAnzahlHoelzer + "Streichhoelzer.");
